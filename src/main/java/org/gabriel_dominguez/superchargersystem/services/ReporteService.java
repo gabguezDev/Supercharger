@@ -1,8 +1,10 @@
 package org.gabriel_dominguez.superchargersystem.services;
 
 import org.gabriel_dominguez.superchargersystem.dao.FichaMecanicaDAO;
+import org.gabriel_dominguez.superchargersystem.factory.DAOFactory;
 import org.gabriel_dominguez.superchargersystem.models.FichaMecanica;
 import org.gabriel_dominguez.superchargersystem.models.Mecanico;
+
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
@@ -12,18 +14,17 @@ public class ReporteService {
   private final FichaMecanicaDAO fichaMecanicaDAO;
 
   public ReporteService() {
-    this.fichaMecanicaDAO = new FichaMecanicaDAO();
+    // Antes:
+    // this.fichaMecanicaDAO = new FichaMecanicaDAO();
+
+    // Después:
+    this.fichaMecanicaDAO = DAOFactory.getInstance().createFichaMecanicaDAO();
   }
 
   public Map<Mecanico, Integer> generarReporteTrabajosporMecanico(LocalDateTime desde, LocalDateTime hasta) {
     validarFechas(desde, hasta);
     try {
-      return fichaMecanicaDAO.buscarTodos().stream()
-          .filter(f -> fechaEnRango(f.getTurno().getFechaHora(), desde, hasta))
-          .collect(Collectors.groupingBy(
-              f -> f.getTurno().getMecanico(),
-              Collectors.collectingAndThen(Collectors.counting(), Long::intValue)
-          ));
+      return fichaMecanicaDAO.buscarTodos().stream().filter(f -> fechaEnRango(f.getTurno().getFechaHora(), desde, hasta)).collect(Collectors.groupingBy(f -> f.getTurno().getMecanico(), Collectors.collectingAndThen(Collectors.counting(), Long::intValue)));
     } catch (Exception e) {
       throw new RuntimeException("Error al generar reporte por mecánico", e);
     }
@@ -39,12 +40,7 @@ public class ReporteService {
 
   public Map<String, Long> generarEstadisticasConformidad() {
     try {
-      return fichaMecanicaDAO.buscarTodos().stream()
-          .filter(f -> f.getEstado().startsWith("COMPLETADO"))
-          .collect(Collectors.groupingBy(
-              FichaMecanica::getEstado,
-              Collectors.counting()
-          ));
+      return fichaMecanicaDAO.buscarTodos().stream().filter(f -> f.getEstado().startsWith("COMPLETADO")).collect(Collectors.groupingBy(FichaMecanica::getEstado, Collectors.counting()));
     } catch (Exception e) {
       throw new RuntimeException("Error al generar estadísticas de conformidad", e);
     }

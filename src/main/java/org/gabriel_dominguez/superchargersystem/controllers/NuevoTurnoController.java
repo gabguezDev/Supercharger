@@ -9,6 +9,7 @@ import org.gabriel_dominguez.superchargersystem.MainApp;
 import org.gabriel_dominguez.superchargersystem.dao.ClienteDAO;
 import org.gabriel_dominguez.superchargersystem.dao.MecanicoDAO;
 import org.gabriel_dominguez.superchargersystem.dao.VehiculoDAO;
+import org.gabriel_dominguez.superchargersystem.factory.DAOFactory;
 import org.gabriel_dominguez.superchargersystem.models.Cliente;
 import org.gabriel_dominguez.superchargersystem.models.Mecanico;
 import org.gabriel_dominguez.superchargersystem.models.Turno;
@@ -19,9 +20,22 @@ import java.time.LocalDateTime;
 
 public class NuevoTurnoController {
   private final TurnoService turnoService = new TurnoService();
-  private final ClienteDAO clienteDAO = new ClienteDAO();
-  private final VehiculoDAO vehiculoDAO = new VehiculoDAO();
-  private final MecanicoDAO mecanicoDAO = new MecanicoDAO();
+  private final ClienteDAO clienteDAO;
+  private final VehiculoDAO vehiculoDAO;
+  private final MecanicoDAO mecanicoDAO;
+
+  public NuevoTurnoController() {
+    // Antes:
+    // this.clienteDAO = new ClienteDAO();
+    // this.vehiculoDAO = new VehiculoDAO();
+    // this.mecanicoDAO = new MecanicoDAO();
+
+    // Después:
+    DAOFactory factory = DAOFactory.getInstance();
+    this.clienteDAO = factory.createClienteDAO();
+    this.vehiculoDAO = factory.createVehiculoDAO();
+    this.mecanicoDAO = factory.createMecanicoDAO();
+  }
 
   @FXML
   private DatePicker fechaHora;

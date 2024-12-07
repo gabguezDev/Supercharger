@@ -1,6 +1,7 @@
 package org.gabriel_dominguez.superchargersystem.services;
 
 import org.gabriel_dominguez.superchargersystem.dao.FichaMecanicaDAO;
+import org.gabriel_dominguez.superchargersystem.factory.DAOFactory;
 import org.gabriel_dominguez.superchargersystem.models.FichaMecanica;
 import java.util.List;
 
@@ -8,7 +9,11 @@ public class ConformidadService {
   private final FichaMecanicaDAO fichaMecanicaDAO;
 
   public ConformidadService() {
-    this.fichaMecanicaDAO = new FichaMecanicaDAO();
+    // Antes:
+    // this.fichaMecanicaDAO = new FichaMecanicaDAO();
+
+    // Después:
+    this.fichaMecanicaDAO = DAOFactory.getInstance().createFichaMecanicaDAO();
   }
 
   public boolean registrarConformidad(Long fichaId, boolean conforme, String observaciones) {

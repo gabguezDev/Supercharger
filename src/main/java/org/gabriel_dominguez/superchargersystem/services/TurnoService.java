@@ -1,6 +1,7 @@
 package org.gabriel_dominguez.superchargersystem.services;
 
 import org.gabriel_dominguez.superchargersystem.dao.TurnoDAO;
+import org.gabriel_dominguez.superchargersystem.factory.DAOFactory;
 import org.gabriel_dominguez.superchargersystem.models.Turno;
 import org.gabriel_dominguez.superchargersystem.models.Mecanico;
 import java.time.LocalDateTime;
@@ -10,7 +11,10 @@ public class TurnoService {
   private final TurnoDAO turnoDAO;
 
   public TurnoService() {
-    this.turnoDAO = new TurnoDAO();
+    // this.turnoDAO = new TurnoDAO();
+
+    // Después:
+    this.turnoDAO = DAOFactory.getInstance().createTurnoDAO();
   }
 
   public boolean crearTurno(Turno turno) {

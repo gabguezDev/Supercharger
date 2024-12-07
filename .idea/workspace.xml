@@ -5,48 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d00c2ee8-4244-4a4c-9628-c645dd5ec04e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/controllers/ConsultaEstadosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/controllers/GestionTurnosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/controllers/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/controllers/MainControllers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/controllers/NuevoTurnoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/controllers/RegistroTrabajosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/dao/ClienteDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/dao/FichaMecanicaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/dao/MecanicoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/dao/TurnoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/dao/VehiculoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/models/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/models/FichaMecanica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/models/Mecanico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/models/Turno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/models/Vehiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/ConformidadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/ReporteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/TrabajoMecanicoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/TurnoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/utils/DatabaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/gabriel_dominguez/superchargersystem/fxml/ConsultaEstados.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/gabriel_dominguez/superchargersystem/fxml/GestionTurnos.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/gabriel_dominguez/superchargersystem/fxml/Login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/gabriel_dominguez/superchargersystem/fxml/NuevoTurno.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/gabriel_dominguez/superchargersystem/fxml/RegistroTrabajos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/factory/DAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/controllers/NuevoTurnoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/controllers/NuevoTurnoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/ConformidadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/ConformidadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/ReporteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/ReporteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/TrabajoMecanicoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/TrabajoMecanicoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/TurnoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/gabriel_dominguez/superchargersystem/services/TurnoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
