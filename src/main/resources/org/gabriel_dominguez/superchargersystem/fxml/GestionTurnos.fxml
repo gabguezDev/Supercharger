@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.gabriel_dominguez.superchargersystem.controllers.GestionTurnosController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Button text="Nuevo Turno" onAction="#nuevoTurno"/>
+        <Button text="Editar" onAction="#editarTurno"/>
+        <Button text="Eliminar" onAction="#eliminarTurno"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Actualizar" onAction="#cargarTurnos"/>
+    </HBox>
+
+    <TableView fx:id="turnosTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="fechaColumn" text="Fecha y Hora" prefWidth="150"/>
+            <TableColumn fx:id="clienteColumn" text="Cliente" prefWidth="200"/>
+            <TableColumn fx:id="vehiculoColumn" text="Vehículo" prefWidth="200"/>
+            <TableColumn fx:id="mecanicoColumn" text="Mecánico" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>

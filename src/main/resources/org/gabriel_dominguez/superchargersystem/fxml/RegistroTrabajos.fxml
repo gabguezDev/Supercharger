@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.gabriel_dominguez.superchargersystem.controllers.RegistroTrabajosController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <ComboBox fx:id="turnoComboBox" promptText="Seleccionar Turno"/>
+    <TextArea fx:id="descripcionArea" promptText="Descripción del trabajo" VBox.vgrow="ALWAYS"/>
+    <TextField fx:id="repuestosField" promptText="Repuestos utilizados"/>
+    <ComboBox fx:id="estadoComboBox" promptText="Estado del trabajo"/>
+    <Button text="Guardar Trabajo" onAction="#guardarTrabajo"/>
+</VBox>

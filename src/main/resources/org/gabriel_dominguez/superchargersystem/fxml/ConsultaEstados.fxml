@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.gabriel_dominguez.superchargersystem.controllers.ConsultaEstadosController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="busquedaField" promptText="Buscar por cliente"/>
+        <Button text="Buscar" onAction="#buscar"/>
+    </HBox>
+
+    <TableView fx:id="estadosTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="fechaColumn" text="Fecha"/>
+            <TableColumn fx:id="clienteColumn" text="Cliente"/>
+            <TableColumn fx:id="vehiculoColumn" text="Vehículo"/>
+            <TableColumn fx:id="estadoColumn" text="Estado"/>
+        </columns>
+    </TableView>
+</VBox>
