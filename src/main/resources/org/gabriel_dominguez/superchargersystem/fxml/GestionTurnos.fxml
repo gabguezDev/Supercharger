@@ -12,11 +12,11 @@
     </padding>
 
     <HBox spacing="10" alignment="CENTER_LEFT">
-        <Button text="Nuevo Turno" onAction="#nuevoTurno"/>
-        <Button text="Editar" onAction="#editarTurno"/>
-        <Button text="Eliminar" onAction="#eliminarTurno"/>
+        <Button fx:id="nuevoTurnoButton" text="Nuevo Turno" onAction="#nuevoTurno"/>
+        <Button fx:id="editarButton" text="Editar" onAction="#editarTurno"/>
+        <Button fx:id="eliminarButton" text="Eliminar" onAction="#eliminarTurno"/>
         <Region HBox.hgrow="ALWAYS"/>
-        <Button text="Actualizar" onAction="#cargarTurnos"/>
+        <Button fx:id="actualizarButton" text="Actualizar" onAction="#cargarTurnos"/>
     </HBox>
 
     <TableView fx:id="turnosTable" VBox.vgrow="ALWAYS">

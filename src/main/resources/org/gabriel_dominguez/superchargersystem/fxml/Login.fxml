@@ -20,7 +20,7 @@
                    promptText="Contraseña"
                    maxWidth="300"/>
 
-    <Button text="Ingresar"
+    <Button fx:id="loginButton" text="Ingresar"
             onAction="#handleLogin"
             maxWidth="300"/>
 

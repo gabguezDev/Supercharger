@@ -28,4 +28,20 @@ public class LoginController {
       mensajeError.setText("Usuario o contraseña incorrectos");
     }
   }
+
+  public String getUsuario() {
+    return usuarioField.getText();
+  }
+
+  public void setUsuario(String usuario) {
+    usuarioField.setText(usuario);
+  }
+
+  public String getPassword() {
+    return passwordField.getText();
+  }
+
+  public void setPassword(String password) {
+    passwordField.setText(password);
+  }
 }

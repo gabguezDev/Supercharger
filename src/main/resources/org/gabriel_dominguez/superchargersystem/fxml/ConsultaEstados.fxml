@@ -9,7 +9,7 @@
 
     <HBox spacing="10" alignment="CENTER_LEFT">
         <TextField fx:id="busquedaField" promptText="Buscar por cliente"/>
-        <Button text="Buscar" onAction="#buscar"/>
+        <Button fx:id="buscarButton" text="Buscar" onAction="#buscar"/>
     </HBox>
 
     <TableView fx:id="estadosTable" VBox.vgrow="ALWAYS">

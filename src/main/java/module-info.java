@@ -6,12 +6,10 @@ module org.gabriel_dominguez.superchargersystem {
   requires org.controlsfx.controls;
   requires com.dlsc.formsfx;
   requires org.kordamp.bootstrapfx.core;
+  requires java.sql;
 
   // Abrir el paquete de modelos a Hibernate
-  opens org.gabriel_dominguez.superchargersystem.models to org.hibernate.orm.core;
-
-  // Abrir los paquetes de controladores a JavaFX
-  opens org.gabriel_dominguez.superchargersystem.controllers to javafx.fxml;
+  opens org.gabriel_dominguez.superchargersystem.models to org.hibernate.orm.core, javafx.base;
 
   // Exportar paquetes necesarios
   exports org.gabriel_dominguez.superchargersystem;
